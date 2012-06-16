@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OptionsViewController.h"
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController<ModalViewDelegate>
 
 @end

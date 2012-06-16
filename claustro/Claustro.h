@@ -1,4 +1,8 @@
 //
+//  pour commit sur github.com faire depuis le Terminal et dans le dossier de l'application :
+//  git push origin master
+//  une fois les modifications commitées en local
+//
 //  OTOClaustro.h
 //  Tableview
 //

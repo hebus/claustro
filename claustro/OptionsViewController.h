@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 
 // delegate to return switch value selected by the user
-@protocol useExtensionDelegate <NSObject>
+@protocol ModalViewDelegate <NSObject>
 
--(void)useExtensionSelected:(BOOL)enabled;
+-(void)extensionSelected:(BOOL)enabled;
 
 @end
 
 
 @interface OptionsViewController : UIViewController{
-    id<useExtensionDelegate> delegate;
+    id<ModalViewDelegate> delegate;
 }
 
 @property(nonatomic,retain)IBOutlet UISwitch *toggleSwitch;

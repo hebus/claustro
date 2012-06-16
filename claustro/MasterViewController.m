@@ -7,11 +7,13 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
+#import "OptionsViewController.h"
+#import "Tile.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
+    BOOL _didUseExtension;
 }
 @end
 
@@ -29,8 +31,11 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    UIBarButtonItem *optionsButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(options:)];
+    self.navigationItem.rightBarButtonItem = optionsButton;
+    
+    _didUseExtension = NO;
+    [self reloadScenario];
 }
 
 - (void)viewDidUnload
@@ -44,34 +49,79 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (void)insertNewObject:(id)sender
+- (void)options:(id)sender
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    OptionsViewController *optionsView = [[OptionsViewController alloc] initWithNibName:nil bundle:nil];
+    optionsView.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    optionsView.useExtension = _didUseExtension;
+    optionsView.delegate = self;
+    [self presentModalViewController:optionsView animated:YES];
 }
+
+-(void)extensionSelected:(BOOL)enabled{
+    _didUseExtension = enabled;
+    [self reloadScenario];
+    [[self tableView] reloadData];
+}
+
+#pragma mark - data
+-(void)reloadScenario{
+    if(!_objects){
+        _objects = [[NSMutableArray alloc]init];
+    }
+    else {
+        [_objects removeAllObjects];
+    }
+    
+    NSArray *base = [[NSArray alloc] initWithObjects:kScenario01Survivants, kScenario02RetenirInvasion,
+                     kScenario03FrapperLaTete, kScenario04LesPossedes, kScenario05QuiOseGagne, nil];
+    NSDictionary *baseDic = [NSDictionary dictionaryWithObject:base forKey:@"scenario"];
+    [_objects addObject:baseDic];
+    
+    if(_didUseExtension){
+        NSArray *extension1 = [[NSArray alloc] initWithObjects:kScenario11PurifierParLeFeu, kScenario12Egares, 
+                               kScenario13OuvertureChasse, kScenario14AmeDuDemon, kScenario15ExperimentationAnimale,
+                               kScenario16ChasseEtCours, kScenario17LaForge, kScenario18LesReliques, nil];
+        NSDictionary *extDic = [NSDictionary dictionaryWithObject:extension1 forKey:@"scenario"];
+        [_objects addObject:extDic];
+    }
+    NSArray *autres = [[NSArray alloc] initWithObjects:kScenario81AirPutride, kScenario82IlEstANous, kScenario83Eboulement,
+                       kScenario84Separes, nil];
+    NSDictionary *autresDic = [NSDictionary dictionaryWithObject:autres forKey:@"scenario"];
+    [_objects addObject:autresDic];
+}
+
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [_objects count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return [[[_objects objectAtIndex:section] objectForKey:@"scenario"] count];
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if(section == 0){
+        return @"Boîte de base";
+    }
+    else if(section == 1 && _didUseExtension){
+        return @"De Profundis";
+    }
+    else {
+        return @"Autres";
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
-    NSDate *object = [_objects objectAtIndex:indexPath.row];
-    cell.textLabel.text = [object description];
+    NSString *cellValue = [[[_objects objectAtIndex:indexPath.section] objectForKey:@"scenario"] objectAtIndex:indexPath.row];
+    cell.textLabel.text = cellValue;
     return cell;
 }
 

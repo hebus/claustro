@@ -19,11 +19,11 @@
 
 -(void)switchValueChanged:(id)sender{
     
-    if([delegate respondsToSelector:@selector(useExtensionSelected:)]){
+    if([delegate respondsToSelector:@selector(extensionSelected:)]){
         if(toggleSwitch.on)
-            [delegate useExtensionSelected:YES];
+            [delegate extensionSelected:YES];
         else {
-            [delegate useExtensionSelected:NO];
+            [delegate extensionSelected:NO];
         }        
     }
     
