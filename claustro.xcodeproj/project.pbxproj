@@ -16,6 +16,27 @@
 		092C0FA6158C88D0005B4FCF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FA4158C88D0005B4FCF /* MainStoryboard.storyboard */; };
 		092C0FA9158C88D0005B4FCF /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C0FA8158C88D0005B4FCF /* MasterViewController.m */; };
 		092C0FAC158C88D0005B4FCF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C0FAB158C88D0005B4FCF /* DetailViewController.m */; };
+		092C0FB8158C8AF1005B4FCF /* Claustro.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C0FB3158C8AF1005B4FCF /* Claustro.m */; };
+		092C0FB9158C8AF1005B4FCF /* MTwister.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C0FB5158C8AF1005B4FCF /* MTwister.m */; };
+		092C0FBA158C8AF1005B4FCF /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C0FB7158C8AF1005B4FCF /* Tile.m */; };
+		092C0FBE158C8B02005B4FCF /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C0FBC158C8B02005B4FCF /* OptionsViewController.m */; };
+		092C0FBF158C8B02005B4FCF /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FBD158C8B02005B4FCF /* OptionsViewController.xib */; };
+		092C0FD1158C8B1C005B4FCF /* brume.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FC1158C8B1C005B4FCF /* brume.png */; };
+		092C0FD2158C8B1C005B4FCF /* cache.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FC2158C8B1C005B4FCF /* cache.png */; };
+		092C0FD3158C8B1C005B4FCF /* carnassier.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FC3158C8B1C005B4FCF /* carnassier.png */; };
+		092C0FD4158C8B1C005B4FCF /* etroit.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FC4158C8B1C005B4FCF /* etroit.png */; };
+		092C0FD5158C8B1C005B4FCF /* fontaineguerison.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FC5158C8B1C005B4FCF /* fontaineguerison.png */; };
+		092C0FD6158C8B1C005B4FCF /* inonde.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FC6158C8B1C005B4FCF /* inonde.png */; };
+		092C0FD7158C8B1C005B4FCF /* mecanismedemoniaque.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FC7158C8B1C005B4FCF /* mecanismedemoniaque.png */; };
+		092C0FD8158C8B1C005B4FCF /* piege.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FC8158C8B1C005B4FCF /* piege.png */; };
+		092C0FD9158C8B1C005B4FCF /* puitdemoniauqe.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FC9158C8B1C005B4FCF /* puitdemoniauqe.png */; };
+		092C0FDA158C8B1C005B4FCF /* salle.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FCA158C8B1C005B4FCF /* salle.png */; };
+		092C0FDB158C8B1C005B4FCF /* sallepentacle.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FCB158C8B1C005B4FCF /* sallepentacle.png */; };
+		092C0FDC158C8B1C005B4FCF /* sortie.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FCC158C8B1C005B4FCF /* sortie.png */; };
+		092C0FDD158C8B1C005B4FCF /* taniere.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FCD158C8B1C005B4FCF /* taniere.png */; };
+		092C0FDE158C8B1C005B4FCF /* tombeau.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FCE158C8B1C005B4FCF /* tombeau.png */; };
+		092C0FDF158C8B1C005B4FCF /* troudanslesol.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FCF158C8B1C005B4FCF /* troudanslesol.png */; };
+		092C0FE0158C8B1C005B4FCF /* zonesanctifiee.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FD0158C8B1C005B4FCF /* zonesanctifiee.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,17 +44,42 @@
 		092C0F92158C88D0005B4FCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		092C0F94158C88D0005B4FCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		092C0F96158C88D0005B4FCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		092C0F9A158C88D0005B4FCF /* claustro-Info.plist */ = {isa = PBXFileReference; path = "claustro-Info.plist"; sourceTree = "<group>"; };
+		092C0F9A158C88D0005B4FCF /* claustro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "claustro-Info.plist"; sourceTree = "<group>"; };
 		092C0F9C158C88D0005B4FCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		092C0F9E158C88D0005B4FCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		092C0FA0158C88D0005B4FCF /* claustro-Prefix.pch */ = {isa = PBXFileReference; path = "claustro-Prefix.pch"; sourceTree = "<group>"; };
-		092C0FA1158C88D0005B4FCF /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		092C0FA0158C88D0005B4FCF /* claustro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "claustro-Prefix.pch"; sourceTree = "<group>"; };
+		092C0FA1158C88D0005B4FCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		092C0FA2158C88D0005B4FCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		092C0FA5158C88D0005B4FCF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		092C0FA7158C88D0005B4FCF /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		092C0FA7158C88D0005B4FCF /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		092C0FA8158C88D0005B4FCF /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		092C0FAA158C88D0005B4FCF /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		092C0FAA158C88D0005B4FCF /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		092C0FAB158C88D0005B4FCF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		092C0FB2158C8AF1005B4FCF /* Claustro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Claustro.h; sourceTree = "<group>"; };
+		092C0FB3158C8AF1005B4FCF /* Claustro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Claustro.m; sourceTree = "<group>"; };
+		092C0FB4158C8AF1005B4FCF /* MTwister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTwister.h; sourceTree = "<group>"; };
+		092C0FB5158C8AF1005B4FCF /* MTwister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTwister.m; sourceTree = "<group>"; };
+		092C0FB6158C8AF1005B4FCF /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		092C0FB7158C8AF1005B4FCF /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
+		092C0FBB158C8B02005B4FCF /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
+		092C0FBC158C8B02005B4FCF /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
+		092C0FBD158C8B02005B4FCF /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
+		092C0FC1158C8B1C005B4FCF /* brume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brume.png; sourceTree = "<group>"; };
+		092C0FC2158C8B1C005B4FCF /* cache.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cache.png; sourceTree = "<group>"; };
+		092C0FC3158C8B1C005B4FCF /* carnassier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carnassier.png; sourceTree = "<group>"; };
+		092C0FC4158C8B1C005B4FCF /* etroit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = etroit.png; sourceTree = "<group>"; };
+		092C0FC5158C8B1C005B4FCF /* fontaineguerison.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fontaineguerison.png; sourceTree = "<group>"; };
+		092C0FC6158C8B1C005B4FCF /* inonde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inonde.png; sourceTree = "<group>"; };
+		092C0FC7158C8B1C005B4FCF /* mecanismedemoniaque.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mecanismedemoniaque.png; sourceTree = "<group>"; };
+		092C0FC8158C8B1C005B4FCF /* piege.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piege.png; sourceTree = "<group>"; };
+		092C0FC9158C8B1C005B4FCF /* puitdemoniauqe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puitdemoniauqe.png; sourceTree = "<group>"; };
+		092C0FCA158C8B1C005B4FCF /* salle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salle.png; sourceTree = "<group>"; };
+		092C0FCB158C8B1C005B4FCF /* sallepentacle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sallepentacle.png; sourceTree = "<group>"; };
+		092C0FCC158C8B1C005B4FCF /* sortie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sortie.png; sourceTree = "<group>"; };
+		092C0FCD158C8B1C005B4FCF /* taniere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taniere.png; sourceTree = "<group>"; };
+		092C0FCE158C8B1C005B4FCF /* tombeau.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tombeau.png; sourceTree = "<group>"; };
+		092C0FCF158C8B1C005B4FCF /* troudanslesol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = troudanslesol.png; sourceTree = "<group>"; };
+		092C0FD0158C8B1C005B4FCF /* zonesanctifiee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zonesanctifiee.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +126,13 @@
 		092C0F98158C88D0005B4FCF /* claustro */ = {
 			isa = PBXGroup;
 			children = (
+				092C0FC0158C8B0A005B4FCF /* resources */,
+				092C0FB2158C8AF1005B4FCF /* Claustro.h */,
+				092C0FB3158C8AF1005B4FCF /* Claustro.m */,
+				092C0FB4158C8AF1005B4FCF /* MTwister.h */,
+				092C0FB5158C8AF1005B4FCF /* MTwister.m */,
+				092C0FB6158C8AF1005B4FCF /* Tile.h */,
+				092C0FB7158C8AF1005B4FCF /* Tile.m */,
 				092C0FA1158C88D0005B4FCF /* AppDelegate.h */,
 				092C0FA2158C88D0005B4FCF /* AppDelegate.m */,
 				092C0FA4158C88D0005B4FCF /* MainStoryboard.storyboard */,
@@ -87,6 +140,9 @@
 				092C0FA8158C88D0005B4FCF /* MasterViewController.m */,
 				092C0FAA158C88D0005B4FCF /* DetailViewController.h */,
 				092C0FAB158C88D0005B4FCF /* DetailViewController.m */,
+				092C0FBB158C8B02005B4FCF /* OptionsViewController.h */,
+				092C0FBC158C8B02005B4FCF /* OptionsViewController.m */,
+				092C0FBD158C8B02005B4FCF /* OptionsViewController.xib */,
 				092C0F99158C88D0005B4FCF /* Supporting Files */,
 			);
 			path = claustro;
@@ -101,6 +157,29 @@
 				092C0FA0158C88D0005B4FCF /* claustro-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		092C0FC0158C8B0A005B4FCF /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				092C0FC1158C8B1C005B4FCF /* brume.png */,
+				092C0FC2158C8B1C005B4FCF /* cache.png */,
+				092C0FC3158C8B1C005B4FCF /* carnassier.png */,
+				092C0FC4158C8B1C005B4FCF /* etroit.png */,
+				092C0FC5158C8B1C005B4FCF /* fontaineguerison.png */,
+				092C0FC6158C8B1C005B4FCF /* inonde.png */,
+				092C0FC7158C8B1C005B4FCF /* mecanismedemoniaque.png */,
+				092C0FC8158C8B1C005B4FCF /* piege.png */,
+				092C0FC9158C8B1C005B4FCF /* puitdemoniauqe.png */,
+				092C0FCA158C8B1C005B4FCF /* salle.png */,
+				092C0FCB158C8B1C005B4FCF /* sallepentacle.png */,
+				092C0FCC158C8B1C005B4FCF /* sortie.png */,
+				092C0FCD158C8B1C005B4FCF /* taniere.png */,
+				092C0FCE158C8B1C005B4FCF /* tombeau.png */,
+				092C0FCF158C8B1C005B4FCF /* troudanslesol.png */,
+				092C0FD0158C8B1C005B4FCF /* zonesanctifiee.png */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +234,23 @@
 			files = (
 				092C0F9D158C88D0005B4FCF /* InfoPlist.strings in Resources */,
 				092C0FA6158C88D0005B4FCF /* MainStoryboard.storyboard in Resources */,
+				092C0FBF158C8B02005B4FCF /* OptionsViewController.xib in Resources */,
+				092C0FD1158C8B1C005B4FCF /* brume.png in Resources */,
+				092C0FD2158C8B1C005B4FCF /* cache.png in Resources */,
+				092C0FD3158C8B1C005B4FCF /* carnassier.png in Resources */,
+				092C0FD4158C8B1C005B4FCF /* etroit.png in Resources */,
+				092C0FD5158C8B1C005B4FCF /* fontaineguerison.png in Resources */,
+				092C0FD6158C8B1C005B4FCF /* inonde.png in Resources */,
+				092C0FD7158C8B1C005B4FCF /* mecanismedemoniaque.png in Resources */,
+				092C0FD8158C8B1C005B4FCF /* piege.png in Resources */,
+				092C0FD9158C8B1C005B4FCF /* puitdemoniauqe.png in Resources */,
+				092C0FDA158C8B1C005B4FCF /* salle.png in Resources */,
+				092C0FDB158C8B1C005B4FCF /* sallepentacle.png in Resources */,
+				092C0FDC158C8B1C005B4FCF /* sortie.png in Resources */,
+				092C0FDD158C8B1C005B4FCF /* taniere.png in Resources */,
+				092C0FDE158C8B1C005B4FCF /* tombeau.png in Resources */,
+				092C0FDF158C8B1C005B4FCF /* troudanslesol.png in Resources */,
+				092C0FE0158C8B1C005B4FCF /* zonesanctifiee.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +265,10 @@
 				092C0FA3158C88D0005B4FCF /* AppDelegate.m in Sources */,
 				092C0FA9158C88D0005B4FCF /* MasterViewController.m in Sources */,
 				092C0FAC158C88D0005B4FCF /* DetailViewController.m in Sources */,
+				092C0FB8158C8AF1005B4FCF /* Claustro.m in Sources */,
+				092C0FB9158C8AF1005B4FCF /* MTwister.m in Sources */,
+				092C0FBA158C8AF1005B4FCF /* Tile.m in Sources */,
+				092C0FBE158C8B02005B4FCF /* OptionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
