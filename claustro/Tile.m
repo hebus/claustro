@@ -9,55 +9,55 @@
     NSString *path;
     switch (title) {
         case kCache:
-            path = @"picto/cache";
+            path = @"cache";
             break;
         case kCarnassier:
-            path = @"picto/carnassier";
+            path = @"carnassier";
             break;
         case kEtroit:
-            path = @"picto/etroit";
+            path = @"etroit";
             break;
         case kInonde:
-            path = @"picto/inonde";
+            path = @"inonde";
             break;
         case kPiege:
-            path = @"picto/piege";
+            path = @"piege";
             break;
         case kMecanisme_demoniaque:
-            path = @"picto/mecanismedemoniaque";
+            path = @"mecanismedemoniaque";
             break;
         case kSalle_pentacle:
-            path = @"picto/sallepentacle";
+            path = @"sallepentacle";
             break;
         case kSortie:
-            path = @"picto/sortie";
+            path = @"sortie";
             break;
         case kTaniere:
-            path = @"picto/taniere";
+            path = @"taniere";
             break;
         case kTrou_dans_le_sol:
-            path = @"picto/troudanslesol";
+            path = @"troudanslesol";
             break;
         case kBrume:
-            path = @"picto/brume";
+            path = @"brume";
             break;
         case kFontaine_de_guerison:
-            path = @"picto/fontaineguerison";
+            path = @"fontaineguerison";
             break;
         case kPuits_demoniaque:
-            path = @"picto/puitdemoniaque";
+            path = @"puitdemoniaque";
             break;
         case kSalle_T:
-            path = @"picto/salle";
+            path = @"salle";
             break;
         case kSalle_X:
-            path = @"picto/salle";
+            path = @"salle";
             break;
         case kTombeau:
-            path = @"picto/tombeau";
+            path = @"tombeau";
             break;
         case kZone_sanctifiee:
-            path = @"picto/zonesanctifiee";
+            path = @"zonesanctifiee";
             break;
             
         default:

@@ -7,23 +7,31 @@
 //
 
 #import "DetailViewController.h"
+#import "Claustro.h"
 
 @interface DetailViewController ()
 - (void)configureView;
 @end
 
-@implementation DetailViewController
+@implementation DetailViewController{
+    NSString *_detailItem;
+    Claustro *claustro;
+}
 
-@synthesize detailItem = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
-{
+-(void)setDetailItem:(NSString *)newDetailItem withExtension:(BOOL)extension{
+    
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
-        
+
+        if(!claustro){
+            claustro = [[Claustro alloc] init];
+            [claustro setupDeck]; // TODO: a mettre dans l'init, ce serait mieux!!!
+            claustro.useExtension = extension;
+        }
+
         // Update the view.
         [self configureView];
     }
@@ -33,8 +41,12 @@
 {
     // Update the user interface for the detail item.
 
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    if (_detailItem) {
+        self.title = _detailItem;
+
+        if([_detailItem isEqualToString:kScenario11PurifierParLeFeu]){
+            [claustro scenario_PurifierParLeFeu];
+        }
     }
 }
 
@@ -42,19 +54,76 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
+//    [self configureView];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-    self.detailDescriptionLabel = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[claustro deck]count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DetailCell"];
+    
+    Tile *cellValue = [[claustro deck] objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[claustro titleArray] objectAtIndex:cellValue.title];
+    cell.detailTextLabel.text = [[claustro shapeArray] objectAtIndex:cellValue.shape];
+    
+    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", cellValue.imagePath]];
+    cell.imageView.image = image;
+    
+    return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [[claustro deck] removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+    }
+}
+
+/*
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
+
+/*
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
+
 
 @end

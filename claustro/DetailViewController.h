@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@interface DetailViewController : UITableViewController
 
-@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+-(void)setDetailItem:(NSString*)newDetailItem withExtension:(BOOL)extension;
 
 @end

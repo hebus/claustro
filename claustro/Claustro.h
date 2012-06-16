@@ -27,15 +27,17 @@
 -(void) setupDeck;
 -(void) scenario_LesSurvivants;
 -(void) scenario_RetenirInvasion;
+
 -(void) scenario_PurifierParLeFeu;
--(void) scenario_AirPutride;
--(void) scenario_IlEstANous;
--(void) scenario_Eboulement;
--(void) scenario_Separes;
 -(void) scenario_Egares;
 -(void) scenario_AmeDuDemon;
 -(void) scenario_ExperimentationAnimale;
 -(void) scenario_LaForge;
+
+-(void) scenario_AirPutride;
+-(void) scenario_IlEstANous;
+-(void) scenario_Eboulement;
+-(void) scenario_Separes;
 
 
 @end
