@@ -13,38 +13,98 @@
 @synthesize useExtension;
 
 
+
+-(id)init{
+    self = [super init];
+    
+    if ( self ) {
+        shapeArray = [NSArray arrayWithObjects:@"couloir",@"T",@"coude",@"sans issue",@"croisement",nil];
+        titleArray = [NSArray arrayWithObjects:
+                      @"Tuile",
+                      @"Trou dans le sol",
+                      @"Carnassier",
+                      @"Etroit",
+                      @"Cache",
+                      @"Tuile",
+                      @"Inonde",
+                      @"Piege",
+                      @"Taniere",
+                      @"Zone sanctifiee",
+                      @"Fontaine de guerison",
+                      @"Mecanisme demoniaque",
+                      @"Salle pentacle",
+                      @"Salle X",
+                      @"Salle T",
+                      @"Puits demoniaque",
+                      @"Brume",
+                      @"Tombeau",
+                      @"Sortie", nil];
+    }
+    
+    return self;
+}
+-(void) initWithScenarioName:(NSString *)name{
+    [self setupDeck];
+    
+    if([name isEqualToString:kScenario01Survivants]){
+        [self scenario_LesSurvivants];
+    }
+    else if([name isEqualToString:kScenario02RetenirInvasion]){
+        [self scenario_RetenirInvasion];
+    }
+    else if([name isEqualToString:kScenario03FrapperLaTete]){
+        [self scenario_LesSurvivants];
+    }
+    else if([name isEqualToString:kScenario04LesPossedes]){
+
+    }
+    else if([name isEqualToString:kScenario05QuiOseGagne]){
+
+    }
+    else if([name isEqualToString:kScenario11PurifierParLeFeu]){
+        [self scenario_PurifierParLeFeu];
+    }
+    else if([name isEqualToString:kScenario12Egares]){
+        [self scenario_Egares];
+    }
+    else if([name isEqualToString:kScenario13OuvertureChasse]){
+
+    }
+    else if([name isEqualToString:kScenario14AmeDuDemon]){
+        [self scenario_AmeDuDemon];
+    }
+    else if([name isEqualToString:kScenario15ExperimentationAnimale]){
+        [self scenario_ExperimentationAnimale];
+    }
+    else if([name isEqualToString:kScenario16ChasseEtCours]){
+
+    }
+    else if([name isEqualToString:kScenario17LaForge]){
+        [self scenario_LaForge];
+    }
+    else if([name isEqualToString:kScenario18LesReliques]){
+
+    }
+    else if([name isEqualToString:kScenario81AirPutride]){
+        [self scenario_AirPutride];
+    }
+    else if([name isEqualToString:kScenario82IlEstANous]){
+        [self scenario_IlEstANous];
+    }
+    else if([name isEqualToString:kScenario83Eboulement]){
+        [self scenario_Eboulement];
+    }
+    else if([name isEqualToString:kScenario84Separes]){
+        [self scenario_Separes];
+    }    
+}
 -(void)setupDeck{
-    _deck = [[NSMutableArray alloc]init];
     
-    shapeArray = [NSArray arrayWithObjects:@"couloir",@"T",@"coude",@"sans issue",@"croisement",nil];
-    titleArray = [NSArray arrayWithObjects:
-                  @"Tuile",
-                  @"Trou dans le sol",
-                  @"Carnassier",
-                  @"Etroit",
-                  @"Cache",
-                  @"Tuile",
-                  @"Inonde",
-                  @"Piege",
-                  @"Taniere",
-                  @"Zone sanctifiee",
-                  @"Fontaine de guerison",
-                  @"Mecanisme demoniaque",
-                  @"Salle pentacle",
-                  @"Salle X",
-                  @"Salle T",
-                  @"Puits demoniaque",
-                  @"Brume",
-                  @"Tombeau",
-                  @"Sortie", nil];
-    
-    // Tuiles de base
-    //    allTilesToDeck(deck);
-    //    shuffleDeck(deck);
-    
-    //    scenario_PurifierParLeFeu(deck);
-    //    scenario_LaForge(deck);
-    //    scenario_RetenirInvasion(deck);
+    if(!_deck)
+        _deck = [[NSMutableArray alloc]init];
+    else {
+        [_deck removeAllObjects];
+    }
 }
 
 #pragma mark - Deck methods
@@ -56,6 +116,9 @@ void addToDeck(eTitle title ,eShape shape ,NSMutableArray* deck){
 }
 
 -(void) allTilesToDeck:(NSMutableArray*) deck{
+    addToDeck(kSalle_pentacle, kCroisement, deck);
+    addToDeck(kSortie, kT, deck);
+    addToDeck(kTrou_dans_le_sol,kCouloir,deck);
     addToDeck(kTrou_dans_le_sol,kCouloir,deck);
     addToDeck(kTrou_dans_le_sol,kT,deck);
     addToDeck(kCarnassier,kCouloir,deck);
@@ -77,11 +140,8 @@ void addToDeck(eTitle title ,eShape shape ,NSMutableArray* deck){
     addToDeck(kInonde, kCoude, deck);
     addToDeck(kPiege, kCouloir, deck);
     addToDeck(kPiege, kT, deck);
-    addToDeck(kSalle_pentacle, kCroisement, deck);
     addToDeck(kTaniere, kT, deck);
     addToDeck(kTaniere, kCroisement, deck);
-    addToDeck(kSortie, kT, deck);
-    addToDeck(kTuile, kCouloir, deck);
     addToDeck(kTuile, kCouloir, deck);
     addToDeck(kTuile, kCouloir, deck);
     addToDeck(kTuile, kCouloir, deck);
@@ -91,7 +151,8 @@ void addToDeck(eTitle title ,eShape shape ,NSMutableArray* deck){
     addToDeck(kTuile, kCoude, deck);
     addToDeck(kTuile, kCoude, deck);
     addToDeck(kTuile, kCroisement, deck);
-    addToDeck(kTuile, kCroisement, deck);    
+    addToDeck(kTuile, kCroisement, deck);
+    
     if([self useExtension]){
         addToDeck(kSalle_X, kCroisement, deck);
         addToDeck(kSalle_T, kT, deck);
@@ -104,6 +165,11 @@ void addToDeck(eTitle title ,eShape shape ,NSMutableArray* deck){
         addToDeck(kZone_sanctifiee, kCouloir, deck);
         addToDeck(kZone_sanctifiee, kT, deck);
     }
+}
+
+-(void)shuffleDeck{
+    // relancer un mélange, depuis l'UI
+    shuffleDeck(_deck);
 }
 void shuffleDeck(NSMutableArray *deck){
     MTwister* randTwist = [ [ MTwister alloc ] init ];

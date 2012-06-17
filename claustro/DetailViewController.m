@@ -28,7 +28,6 @@
 
         if(!claustro){
             claustro = [[Claustro alloc] init];
-            [claustro setupDeck]; // TODO: a mettre dans l'init, ce serait mieux!!!
             claustro.useExtension = extension;
         }
 
@@ -44,9 +43,7 @@
     if (_detailItem) {
         self.title = _detailItem;
 
-        if([_detailItem isEqualToString:kScenario11PurifierParLeFeu]){
-            [claustro scenario_PurifierParLeFeu];
-        }
+        [claustro initWithScenarioName:_detailItem];
     }
 }
 
@@ -55,6 +52,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 //    [self configureView];
+    UIBarButtonItem *shuffleButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(shuffle:)];
+    
+    self.navigationItem.rightBarButtonItem = shuffleButton;
+    
+}
+
+- (void)shuffle:(id)sender
+{
+    [claustro initWithScenarioName:_detailItem];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidUnload

@@ -23,6 +23,7 @@
 @property(nonatomic,retain)NSArray *shapeArray;
 @property(nonatomic)BOOL useExtension;
 
+-(void) initWithScenarioName:(NSString*)name;
 -(void) allTilesToDeck:(NSMutableArray*) deck;
 -(void) setupDeck;
 -(void) scenario_LesSurvivants;
@@ -39,5 +40,6 @@
 -(void) scenario_Eboulement;
 -(void) scenario_Separes;
 
+-(void)shuffleDeck;
 
 @end
