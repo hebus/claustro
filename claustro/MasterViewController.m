@@ -34,6 +34,10 @@
     UIBarButtonItem *optionsButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(options:)];
     self.navigationItem.rightBarButtonItem = optionsButton;
     
+    // permet de définir une image en background de la tableview
+//    UIImageView *view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BackgroundDark.png"]];
+//    self.tableView.backgroundView = view;
+    
     _didUseExtension = NO;
     [self reloadScenario];
 }

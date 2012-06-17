@@ -56,10 +56,10 @@
         [self scenario_LesSurvivants];
     }
     else if([name isEqualToString:kScenario04LesPossedes]){
-
+        [self scenario_Possedes];
     }
     else if([name isEqualToString:kScenario05QuiOseGagne]){
-
+        [self scenario_QuiOseGagne];
     }
     else if([name isEqualToString:kScenario11PurifierParLeFeu]){
         [self scenario_PurifierParLeFeu];
@@ -262,10 +262,8 @@ void removeFromDeckAllShape(eShape shape, NSMutableArray *deck){
     addToDeck(kCache,kSans_issue,tmp);
     shuffleDeck(tmp);
     
-    // remettre les tuiles dans le deck principal    
-    for (unsigned int i = 0; i < [tmp count]; i++) {
-        [deck addObject:[tmp objectAtIndex:i]];        
-    }
+    // remettre les tuiles dans le deck principal   
+    [deck addObjectsFromArray:tmp];
 }
 -(void)scenario_AirPutride{
     [self scenario_AirPutride:_deck];
@@ -396,8 +394,99 @@ void removeFromDeckAllShape(eShape shape, NSMutableArray *deck){
     shuffleDeck(tmp2);
     
     // integrer les tuiles dans le deck principal
-    for (unsigned int i = 0; i < [tmp2 count]; i++) {
-        [deck addObject:[tmp2 objectAtIndex:i]];        
+    [deck addObjectsFromArray:tmp2];
+}
+-(void)scenario_Possedes{
+    [self scenario_Possedes:_deck];
+}
+-(void)scenario_Possedes:(NSMutableArray*)deck{
+    NSMutableArray *tmp = [[NSMutableArray alloc] init];
+    [self allTilesToDeck:tmp];
+    removeFromDeck(kSortie, tmp);
+    removeFromDeck(kSalle_pentacle, tmp);
+    removeFromDeckAllTitle(kCache, tmp);
+    shuffleDeck(tmp);
+    
+    // première pile de 3 tuiles
+    for (unsigned int i = 0; i < 3; i++) {
+        [deck addObject:[tmp objectAtIndex:0]];
+        [tmp removeObjectAtIndex:0];
     }
+    
+    // création de la pile des tuiles caches et mélange
+    NSMutableArray *caches = [[NSMutableArray alloc] init];
+    addToDeck(kCache,kCouloir,caches);
+    addToDeck(kCache,kSans_issue,caches);
+    addToDeck(kCache,kSans_issue,caches);
+    addToDeck(kCache,kSans_issue,caches);
+    shuffleDeck(caches);
+    
+    // prendre 2 tuiles de la pioche
+    NSMutableArray *tmp2 = [[NSMutableArray alloc]init];
+    [tmp2 addObject:[tmp objectAtIndex:0]];
+    [tmp removeObjectAtIndex:0];
+    [tmp2 addObject:[tmp objectAtIndex:0]];
+    [tmp removeObjectAtIndex:0];
+    // et y ajouter une tuile cache prise au hasard
+    [tmp2 addObject:[caches objectAtIndex:0]];
+    [caches removeObjectAtIndex:0];
+    // faut mettre tmp2 dans deck
+    shuffleDeck(tmp2);
+    [deck addObjectsFromArray:tmp2];
+    
+    
+    // on remet ça une 3eme fois
+    // prendre 2 tuiles de la pioche
+    NSMutableArray *tmp3 = [[NSMutableArray alloc]init];
+    [tmp3 addObject:[tmp objectAtIndex:0]];
+    [tmp removeObjectAtIndex:0];
+    [tmp3 addObject:[tmp objectAtIndex:0]];
+    [tmp removeObjectAtIndex:0];
+    // et y ajouter une tuile cache prise au hasard
+    [tmp3 addObject:[caches objectAtIndex:0]];
+    [caches removeObjectAtIndex:0];
+    // faut mettre tmp2 dans deck
+    shuffleDeck(tmp3);
+    [deck addObjectsFromArray:tmp3];
+    
+    // au final on doit obtenir une pile de 9 tuiles dont 2 sont des caches
+}
+-(void)scenario_QuiOseGagne{
+    [self scenario_QuiOseGagne:_deck];
+}
+-(void)scenario_QuiOseGagne:(NSMutableArray*)deck{
+    NSMutableArray *tmp = [[NSMutableArray alloc] init];
+    [self allTilesToDeck:tmp];
+    removeFromDeck(kSortie, tmp);
+    removeFromDeck(kSalle_pentacle, tmp);
+    removeFromDeckAllTitle(kCache, tmp);
+    shuffleDeck(tmp);
+    
+    // première pile de 8 tuiles
+    for (unsigned int i = 0; i < 8; i++) {
+        [deck addObject:[tmp objectAtIndex:0]];
+        [tmp removeObjectAtIndex:0];
+    }
+    
+    // création de la pile des tuiles caches et mélange
+    NSMutableArray *caches = [[NSMutableArray alloc] init];
+    addToDeck(kCache,kCouloir,caches);
+    addToDeck(kCache,kSans_issue,caches);
+    addToDeck(kCache,kSans_issue,caches);
+    addToDeck(kCache,kSans_issue,caches);
+    shuffleDeck(caches);
+    
+    NSMutableArray *tmp2 = [[NSMutableArray alloc]init];
+    [tmp2 addObject:[tmp objectAtIndex:0]];
+    [tmp2 addObject:[tmp objectAtIndex:1]];
+    [tmp2 addObject:[caches objectAtIndex:0]];
+    [tmp2 addObject:[caches objectAtIndex:1]];
+    shuffleDeck(tmp2);
+    
+    // ajouter la pile au deck
+    [deck addObjectsFromArray:tmp2];
+    
+    // au final on a une pile de 12 tuiles dont 2 caches se trouvant
+    // parmis les 4 dernières
 }
 @end

@@ -37,6 +37,10 @@
 		092C0FDE158C8B1C005B4FCF /* tombeau.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FCE158C8B1C005B4FCF /* tombeau.png */; };
 		092C0FDF158C8B1C005B4FCF /* troudanslesol.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FCF158C8B1C005B4FCF /* troudanslesol.png */; };
 		092C0FE0158C8B1C005B4FCF /* zonesanctifiee.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FD0158C8B1C005B4FCF /* zonesanctifiee.png */; };
+		09F429F7158DE1D800A47749 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F429F6158DE1D800A47749 /* Icon.png */; };
+		09F429FA158DE1DB00A47749 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F429F9158DE1DB00A47749 /* Icon@2x.png */; };
+		09F429FC158DE1E000A47749 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F429FB158DE1E000A47749 /* Default@2x.png */; };
+		09F429FE158DE1E400A47749 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F429FD158DE1E400A47749 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,10 @@
 		092C0FCE158C8B1C005B4FCF /* tombeau.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tombeau.png; sourceTree = "<group>"; };
 		092C0FCF158C8B1C005B4FCF /* troudanslesol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = troudanslesol.png; sourceTree = "<group>"; };
 		092C0FD0158C8B1C005B4FCF /* zonesanctifiee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zonesanctifiee.png; sourceTree = "<group>"; };
+		09F429F6158DE1D800A47749 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		09F429F9158DE1DB00A47749 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		09F429FB158DE1E000A47749 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		09F429FD158DE1E400A47749 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,10 @@
 		092C0F83158C88D0005B4FCF = {
 			isa = PBXGroup;
 			children = (
+				09F429FD158DE1E400A47749 /* Default.png */,
+				09F429FB158DE1E000A47749 /* Default@2x.png */,
+				09F429F9158DE1DB00A47749 /* Icon@2x.png */,
+				09F429F6158DE1D800A47749 /* Icon.png */,
 				092C0F98158C88D0005B4FCF /* claustro */,
 				092C0F91158C88D0005B4FCF /* Frameworks */,
 				092C0F8F158C88D0005B4FCF /* Products */,
@@ -251,6 +263,10 @@
 				092C0FDE158C8B1C005B4FCF /* tombeau.png in Resources */,
 				092C0FDF158C8B1C005B4FCF /* troudanslesol.png in Resources */,
 				092C0FE0158C8B1C005B4FCF /* zonesanctifiee.png in Resources */,
+				09F429F7158DE1D800A47749 /* Icon.png in Resources */,
+				09F429FA158DE1DB00A47749 /* Icon@2x.png in Resources */,
+				09F429FC158DE1E000A47749 /* Default@2x.png in Resources */,
+				09F429FE158DE1E400A47749 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +396,7 @@
 				092C0FB1158C88D0005B4FCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
