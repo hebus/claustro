@@ -14,15 +14,15 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>Icon.png</string>
-				<string>Icon@2x.png</string>
+				<string>icon.png</string>
+				<string>icon@2x.png</string>
 				<string>Default@2x.png</string>
 				<string>Default.png</string>
 			</array>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>craftstudio.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.craftstudio.claustrophobiatileshuffler</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
