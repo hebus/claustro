@@ -44,6 +44,7 @@
         self.title = _detailItem;
 
         [claustro initWithScenarioName:_detailItem];
+        [self.tableView reloadData];
     }
 }
 
@@ -55,7 +56,7 @@
     UIBarButtonItem *shuffleButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(shuffle:)];
     
     self.navigationItem.rightBarButtonItem = shuffleButton;
-    
+    [shuffleButton release];
 }
 
 - (void)shuffle:(id)sender
@@ -75,6 +76,16 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+#ifndef __IPHONE_5_0
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+//        self.title = NSLocalizedString(@"Detail", @"Detail");
+//    }
+    return self;
+}
+#endif
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -88,8 +99,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+#ifndef __IPHONE_5_0    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DetailCell"];
+#else
+    static NSString *CellIdentifier = @"DetailCell";
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+    }
+#endif
+    
+//    NSLog(@"%i, %i", indexPath.row, [[claustro deck]count]);
+       
     Tile *cellValue = [[claustro deck] objectAtIndex:indexPath.row];
     cell.textLabel.text = [[claustro titleArray] objectAtIndex:cellValue.title];
     cell.detailTextLabel.text = [[claustro shapeArray] objectAtIndex:cellValue.shape];

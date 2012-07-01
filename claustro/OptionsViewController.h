@@ -22,7 +22,7 @@
 
 @property(nonatomic,retain)IBOutlet UISwitch *toggleSwitch;
 @property(nonatomic)BOOL useExtension;
-@property(nonatomic)id delegate;
+@property(nonatomic, retain)id delegate;
 
 -(IBAction)switchValueChanged:(id)sender;
 

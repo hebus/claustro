@@ -64,7 +64,7 @@ static NSInteger maskLowerBits = 0x7fffffffUL;  // Last 32 bits
 }
 - (void)dealloc
 {
-
+    [super dealloc];
 }
 
 @end

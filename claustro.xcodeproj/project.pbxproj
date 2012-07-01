@@ -15,7 +15,6 @@
 		092C0F9D158C88D0005B4FCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 092C0F9B158C88D0005B4FCF /* InfoPlist.strings */; };
 		092C0F9F158C88D0005B4FCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C0F9E158C88D0005B4FCF /* main.m */; };
 		092C0FA3158C88D0005B4FCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C0FA2158C88D0005B4FCF /* AppDelegate.m */; };
-		092C0FA6158C88D0005B4FCF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FA4158C88D0005B4FCF /* MainStoryboard.storyboard */; };
 		092C0FA9158C88D0005B4FCF /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C0FA8158C88D0005B4FCF /* MasterViewController.m */; };
 		092C0FAC158C88D0005B4FCF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C0FAB158C88D0005B4FCF /* DetailViewController.m */; };
 		092C0FB8158C8AF1005B4FCF /* Claustro.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C0FB3158C8AF1005B4FCF /* Claustro.m */; };
@@ -39,6 +38,8 @@
 		092C0FDE158C8B1C005B4FCF /* tombeau.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FCE158C8B1C005B4FCF /* tombeau.png */; };
 		092C0FDF158C8B1C005B4FCF /* troudanslesol.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FCF158C8B1C005B4FCF /* troudanslesol.png */; };
 		092C0FE0158C8B1C005B4FCF /* zonesanctifiee.png in Resources */ = {isa = PBXBuildFile; fileRef = 092C0FD0158C8B1C005B4FCF /* zonesanctifiee.png */; };
+		092D1959159F07E200F05DD1 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092D1958159F07E200F05DD1 /* MasterViewController.xib */; };
+		092D195B159F07F200F05DD1 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092D195A159F07F200F05DD1 /* DetailViewController.xib */; };
 		09F429FC158DE1E000A47749 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F429FB158DE1E000A47749 /* Default@2x.png */; };
 		09F429FE158DE1E400A47749 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F429FD158DE1E400A47749 /* Default.png */; };
 /* End PBXBuildFile section */
@@ -56,7 +57,6 @@
 		092C0FA0158C88D0005B4FCF /* claustro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "claustro-Prefix.pch"; sourceTree = "<group>"; };
 		092C0FA1158C88D0005B4FCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		092C0FA2158C88D0005B4FCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		092C0FA5158C88D0005B4FCF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		092C0FA7158C88D0005B4FCF /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		092C0FA8158C88D0005B4FCF /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		092C0FAA158C88D0005B4FCF /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -86,6 +86,8 @@
 		092C0FCE158C8B1C005B4FCF /* tombeau.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tombeau.png; sourceTree = "<group>"; };
 		092C0FCF158C8B1C005B4FCF /* troudanslesol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = troudanslesol.png; sourceTree = "<group>"; };
 		092C0FD0158C8B1C005B4FCF /* zonesanctifiee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zonesanctifiee.png; sourceTree = "<group>"; };
+		092D1958159F07E200F05DD1 /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
+		092D195A159F07F200F05DD1 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		09F429FB158DE1E000A47749 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		09F429FD158DE1E400A47749 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,11 +149,12 @@
 				092C0FB7158C8AF1005B4FCF /* Tile.m */,
 				092C0FA1158C88D0005B4FCF /* AppDelegate.h */,
 				092C0FA2158C88D0005B4FCF /* AppDelegate.m */,
-				092C0FA4158C88D0005B4FCF /* MainStoryboard.storyboard */,
 				092C0FA7158C88D0005B4FCF /* MasterViewController.h */,
 				092C0FA8158C88D0005B4FCF /* MasterViewController.m */,
+				092D1958159F07E200F05DD1 /* MasterViewController.xib */,
 				092C0FAA158C88D0005B4FCF /* DetailViewController.h */,
 				092C0FAB158C88D0005B4FCF /* DetailViewController.m */,
+				092D195A159F07F200F05DD1 /* DetailViewController.xib */,
 				092C0FBB158C8B02005B4FCF /* OptionsViewController.h */,
 				092C0FBC158C8B02005B4FCF /* OptionsViewController.m */,
 				092C0FBD158C8B02005B4FCF /* OptionsViewController.xib */,
@@ -245,7 +248,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				092C0F9D158C88D0005B4FCF /* InfoPlist.strings in Resources */,
-				092C0FA6158C88D0005B4FCF /* MainStoryboard.storyboard in Resources */,
 				092C0FBF158C8B02005B4FCF /* OptionsViewController.xib in Resources */,
 				092C0FD1158C8B1C005B4FCF /* brume.png in Resources */,
 				092C0FD2158C8B1C005B4FCF /* cache.png in Resources */,
@@ -267,6 +269,8 @@
 				09F429FE158DE1E400A47749 /* Default.png in Resources */,
 				09166ACF158FA328000C6ABF /* icon.png in Resources */,
 				09166AD3158FA629000C6ABF /* icon@2x.png in Resources */,
+				092D1959159F07E200F05DD1 /* MasterViewController.xib in Resources */,
+				092D195B159F07F200F05DD1 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,14 +303,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		092C0FA4158C88D0005B4FCF /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				092C0FA5158C88D0005B4FCF /* en */,
-			);
-			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -315,7 +311,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Olivier TOME";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -331,7 +327,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PROVISIONING_PROFILE = "E8DA55E5-4C84-4049-A58F-2C992028F3CA";
 				SDKROOT = iphoneos;
 			};
@@ -342,18 +338,19 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Olivier TOME";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Olivier TOME";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "E8DA55E5-4C84-4049-A58F-2C992028F3CA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E8DA55E5-4C84-4049-A58F-2C992028F3CA";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -365,7 +362,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "claustro/claustro-Prefix.pch";
 				INFOPLIST_FILE = "claustro/claustro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -376,7 +375,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "claustro/claustro-Prefix.pch";
 				INFOPLIST_FILE = "claustro/claustro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

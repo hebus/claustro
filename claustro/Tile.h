@@ -59,8 +59,8 @@ typedef enum {
     NSString *imagePath;
 }
 
-@property(nonatomic) eShape shape;
-@property(nonatomic) eTitle title;
+@property(nonatomic,assign) eShape shape;
+@property(nonatomic,assign) eTitle title;
 -(NSString *) imagePath;
 
 @end

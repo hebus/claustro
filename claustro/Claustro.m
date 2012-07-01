@@ -18,8 +18,8 @@
     self = [super init];
     
     if ( self ) {
-        shapeArray = [NSArray arrayWithObjects:@"couloir",@"T",@"coude",@"sans issue",@"croisement",nil];
-        titleArray = [NSArray arrayWithObjects:
+        shapeArray = [[NSArray arrayWithObjects:@"couloir",@"T",@"coude",@"sans issue",@"croisement",nil] retain];
+        titleArray = [[NSArray arrayWithObjects:
                       @"Tuile",
                       @"Trou dans le sol",
                       @"Carnassier",
@@ -38,7 +38,7 @@
                       @"Puits demoniaque",
                       @"Brume",
                       @"Tombeau",
-                      @"Sortie", nil];
+                      @"Sortie", nil] retain];
     }
     
     return self;
@@ -101,10 +101,19 @@
 -(void)setupDeck{
     
     if(!_deck)
-        _deck = [[NSMutableArray alloc]init];
-    else {
+        _deck = [[[NSMutableArray alloc]init] retain];
+    else
         [_deck removeAllObjects];
-    }
+}
+
+
+-(void)dealloc
+{
+    [_deck release];
+    [shapeArray release];
+    [titleArray release];
+    
+    [super dealloc];
 }
 
 #pragma mark - Deck methods
@@ -113,6 +122,7 @@ void addToDeck(eTitle title ,eShape shape ,NSMutableArray* deck){
     [t setTitle:title];
     [t setShape:shape];
     [deck addObject:t];
+    [t release];
 }
 
 -(void) allTilesToDeck:(NSMutableArray*) deck{
@@ -178,7 +188,8 @@ void shuffleDeck(NSMutableArray *deck){
     for (int i = 0; i<[deck count];i++) {
         NSUInteger randomIndex = [randTwist extractNumber] % ([deck count]- 1 + 1);
         [deck exchangeObjectAtIndex:i withObjectAtIndex:randomIndex];
-    }   
+    }
+    [randTwist release];
 }
 Tile* fromDeck(eTitle title, NSMutableArray *deck){
     int index = -1; 
@@ -211,7 +222,7 @@ void removeFromDeckSpecific(eTitle title, eShape shape, NSMutableArray *deck){
 }
 void removeFromDeckAllTitle(eTitle title, NSMutableArray *deck){
     NSMutableArray *tmp = [[NSMutableArray alloc]init];
-    for (unsigned int i = 0; i < [deck count]; i++) {
+    for (int i = 0; i < [deck count]; i++) {
         Tile *t = [deck objectAtIndex:i];
         if([t title] == title){
             [tmp addObject:[deck objectAtIndex:i]];
@@ -220,6 +231,7 @@ void removeFromDeckAllTitle(eTitle title, NSMutableArray *deck){
     for (unsigned int i = 0; i < [tmp count]; i++) {
         [deck removeObject:[tmp objectAtIndex:i]];
     }
+    [tmp release];
 }
 void removeFromDeckAllShape(eShape shape, NSMutableArray *deck){
     NSMutableArray *tmp = [[NSMutableArray alloc]init];
@@ -232,6 +244,7 @@ void removeFromDeckAllShape(eShape shape, NSMutableArray *deck){
     for (unsigned int i = 0; i < [tmp count]; i++) {
         [deck removeObject:[tmp objectAtIndex:i]];
     }
+    [tmp release];
 }
 
 #pragma mark scenario
@@ -256,7 +269,7 @@ void removeFromDeckAllShape(eShape shape, NSMutableArray *deck){
         int index = [deck count] - 1;
         Tile *t = [deck objectAtIndex:index];
         [tmp addObject:t];
-        [deck removeObjectAtIndex:index];        
+        [deck removeObjectAtIndex:index];
     }
     addToDeck(kSortie,kT,tmp);
     addToDeck(kCache,kSans_issue,tmp);
@@ -264,6 +277,7 @@ void removeFromDeckAllShape(eShape shape, NSMutableArray *deck){
     
     // remettre les tuiles dans le deck principal   
     [deck addObjectsFromArray:tmp];
+    [tmp release];
 }
 -(void)scenario_AirPutride{
     [self scenario_AirPutride:_deck];
@@ -395,6 +409,10 @@ void removeFromDeckAllShape(eShape shape, NSMutableArray *deck){
     
     // integrer les tuiles dans le deck principal
     [deck addObjectsFromArray:tmp2];
+    
+    [tmp release];
+    [tmp2 release];
+    [caches release];
 }
 -(void)scenario_Possedes{
     [self scenario_Possedes:_deck];
@@ -450,12 +468,16 @@ void removeFromDeckAllShape(eShape shape, NSMutableArray *deck){
     [deck addObjectsFromArray:tmp3];
     
     // au final on doit obtenir une pile de 9 tuiles dont 2 sont des caches
+    [tmp3 release];
+    [tmp2 release];
+    [tmp release];
+    [caches release];
 }
 -(void)scenario_QuiOseGagne{
     [self scenario_QuiOseGagne:_deck];
 }
 -(void)scenario_QuiOseGagne:(NSMutableArray*)deck{
-    NSMutableArray *tmp = [[NSMutableArray alloc] init];
+    NSMutableArray *tmp = [[[NSMutableArray alloc] init] retain];
     [self allTilesToDeck:tmp];
     removeFromDeck(kSortie, tmp);
     removeFromDeck(kSalle_pentacle, tmp);
@@ -469,14 +491,14 @@ void removeFromDeckAllShape(eShape shape, NSMutableArray *deck){
     }
     
     // création de la pile des tuiles caches et mélange
-    NSMutableArray *caches = [[NSMutableArray alloc] init];
+    NSMutableArray *caches = [[[NSMutableArray alloc] init] retain];
     addToDeck(kCache,kCouloir,caches);
     addToDeck(kCache,kSans_issue,caches);
     addToDeck(kCache,kSans_issue,caches);
     addToDeck(kCache,kSans_issue,caches);
     shuffleDeck(caches);
     
-    NSMutableArray *tmp2 = [[NSMutableArray alloc]init];
+    NSMutableArray *tmp2 = [[[NSMutableArray alloc]init] retain];
     [tmp2 addObject:[tmp objectAtIndex:0]];
     [tmp2 addObject:[tmp objectAtIndex:1]];
     [tmp2 addObject:[caches objectAtIndex:0]];
@@ -486,6 +508,9 @@ void removeFromDeckAllShape(eShape shape, NSMutableArray *deck){
     // ajouter la pile au deck
     [deck addObjectsFromArray:tmp2];
     
+    [tmp2 release];
+    [tmp release];
+    [caches release];
     // au final on a une pile de 12 tuiles dont 2 caches se trouvant
     // parmis les 4 dernières
 }

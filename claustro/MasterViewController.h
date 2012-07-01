@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "OptionsViewController.h"
 
+@class DetailViewController;
+
 @interface MasterViewController : UITableViewController<ModalViewDelegate>
+
+@property (strong, nonatomic) DetailViewController *detailViewController;
 
 @end
