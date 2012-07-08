@@ -32,8 +32,11 @@
 	// Do any additional setup after loading the view, typically from a nib.
 //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *optionsButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(options:)];
+    UIButton *options = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [options addTarget:self action:@selector(options:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *optionsButton = [[UIBarButtonItem alloc] initWithCustomView:options];
     self.navigationItem.rightBarButtonItem = optionsButton;
+    self.title = @"Scenario";
     [optionsButton release];
     
     // permet de définir une image en background de la tableview
