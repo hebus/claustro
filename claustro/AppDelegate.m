@@ -20,7 +20,12 @@
     // Override point for customization after application launch.
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
+    didUseExtension = [[NSUserDefaults standardUserDefaults] boolForKey:@"didUseExtension"];
+    
     MasterViewController *masterViewController = [[[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil] autorelease];
+
+    masterViewController.didUseExtension = didUseExtension;
+    
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];

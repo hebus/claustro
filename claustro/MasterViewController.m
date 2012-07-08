@@ -13,13 +13,13 @@
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
-    BOOL _didUseExtension;
 }
 @end
 
 @implementation MasterViewController
 
 @synthesize detailViewController;
+@synthesize didUseExtension = _didUseExtension;
 
 - (void)awakeFromNib
 {
@@ -43,7 +43,6 @@
 //    UIImageView *view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BackgroundDark.png"]];
 //    self.tableView.backgroundView = view;
     
-    _didUseExtension = NO;
     [self reloadScenario];
 }
 

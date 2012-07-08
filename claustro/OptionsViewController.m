@@ -25,6 +25,8 @@
         else {
             [delegate extensionSelected:NO];
         }        
+        // sauvegarde des paramètres
+        [[NSUserDefaults standardUserDefaults] setBool:toggleSwitch.on forKey:@"didUseExtension"];
     }
     
     [self dismissModalViewControllerAnimated:YES];

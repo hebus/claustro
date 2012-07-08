@@ -14,5 +14,6 @@
 @interface MasterViewController : UITableViewController<ModalViewDelegate>
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
+@property (nonatomic) BOOL didUseExtension;
 
 @end
