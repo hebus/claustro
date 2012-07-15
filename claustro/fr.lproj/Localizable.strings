@@ -1,0 +1,48 @@
+/* 
+  Localizable.strings
+  claustro
+
+  Created by Christina on 15/07/12.
+  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+*/
+"Les survivants"        = "Les survivants";
+"Retenir l'invasion"    = "Retenir l'invasion";
+"Frapper à la tête"     = "Frapper à la tête";
+"Les possédés"          = "Les possédés";
+"Qui ose gagne"         = "Qui ose gagne";
+
+"Purifier par le feu"       = "Purifier par le feu";
+"Egarés"                    = "Egarés";
+"Ouverture de la chasse"    = "Ouverture de la chasse";
+"L'ame du démon"            = "L'ame du démon";
+"Expérimentation animale"   = "Expérimentation animale";
+"Chasse et cours"           = "Chasse et cours";
+"La forge"                  = "La forge";
+"Les reliques"              = "Les reliques";
+
+"Air putride"       = "Air putride";
+"Il est a nous"     = "Il est a nous";
+"Eboulement"        = "Eboulement";
+"Séparés"           = "Séparés";
+
+
+
+
+"Tuile"                 = "Tuile";
+"Trou dans le sol"      = "Trou dans le sol";
+"Carnassier"            = "Carnassier";
+"Etroit"                = "Etroit";
+"Cache"                 = "Cache";
+"Inonde"                = "Inondée";
+"Piege"                 = "Piege";
+"Taniere"               = "Taniere";
+"Zone sanctifiee"       = "Zone sanctifiée";
+"Fontaine de guerison"  = "Fontaine de guérison";
+"Mecanisme demoniaque"  = "Mécanisme démoniaque";
+"Salle pentacle"        = "Salle pentacle";
+"Salle X"               = "Salle X";
+"Salle T"               = "Salle T";
+"Puits demoniaque"      = "Puits démoniaque";
+"Brume"                 = "Brume";
+"Tombeau"               = "Tombeau";
+"Sortie"                = "Sortie";

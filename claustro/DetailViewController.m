@@ -113,8 +113,8 @@
 //    NSLog(@"%i, %i", indexPath.row, [[claustro deck]count]);
        
     Tile *cellValue = [[claustro deck] objectAtIndex:indexPath.row];
-    cell.textLabel.text = [[claustro titleArray] objectAtIndex:cellValue.title];
-    cell.detailTextLabel.text = [[claustro shapeArray] objectAtIndex:cellValue.shape];
+    cell.textLabel.text = NSLocalizedString([[claustro titleArray] objectAtIndex:cellValue.title],"");
+    cell.detailTextLabel.text = NSLocalizedString([[claustro shapeArray] objectAtIndex:cellValue.shape],"");
     
     UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", cellValue.imagePath]];
     cell.imageView.image = image;

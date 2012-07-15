@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  claustro
+
+  Created by Christina on 15/07/12.
+  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+*/
+"Les survivants"        = "A breath of fresh air";
+"Retenir l'invasion"    = "Retain the invasion";
+"Frapper à la tête"     = "Hit them where it hurts";
+"Les possédés"          = "Possessed";
+"Qui ose gagne"         = "Who dares wins";
+
+"Purifier par le feu"       = "Purified by fire";
+"Egarés"                    = "Lost!";
+"Ouverture de la chasse"    = "Open season";
+"L'ame du démon"            = "Soul of the devil";
+"Expérimentation animale"   = "Animal experimentation";
+"Chasse et cours"           = "Hunt and run";
+"La forge"                  = "The Forge";
+"Les reliques"              = "Relics";
+
+"Air putride"       = "Putrid air";
+"Il est a nous"     = "It's our";
+"Eboulement"        = "Landslide";
+"Séparés"           = "Separated";
+
+
+
+"Tuile"                 = "Tile";
+"Trou dans le sol"      = "Hole in the ground";
+"Carnassier"            = "Hungry";
+"Etroit"                = "Tight";
+"Cache"                 = "Stash";
+"Inonde"                = "Flooded";
+"Piege"                 = "Booby-trapped";
+"Taniere"               = "Lair";
+"Zone sanctifiee"       = "Blessed Area";
+"Fontaine de guerison"  = "Healing Fountain";
+"Mecanisme demoniaque"  = "Demonic mechanism";
+"Salle pentacle"        = "Pentacle room";
+"Salle X"               = "X room";
+"Salle T"               = "T room";
+"Puits demoniaque"      = "Demonic shaft";
+"Brume"                 = "Mist";
+"Tombeau"               = "Tomb";
+"Sortie"                = "Exit";
+
+
+"couloir"       = "Tunnel";
+"T"             = "T";
+"coude"         = "twist";
+"sans issue"    = "Dead end";
+"croisement"    = "cross-road";

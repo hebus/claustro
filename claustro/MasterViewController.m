@@ -142,7 +142,7 @@
     }
 #endif
     NSString *cellValue = [[[_objects objectAtIndex:indexPath.section] objectForKey:@"scenario"] objectAtIndex:indexPath.row];
-    cell.textLabel.text = cellValue;
+    cell.textLabel.text = NSLocalizedString(cellValue,"");
     return cell;
 }
 
