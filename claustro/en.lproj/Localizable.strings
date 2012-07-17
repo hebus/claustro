@@ -11,14 +11,17 @@
 "Les possédés"          = "Possessed";
 "Qui ose gagne"         = "Who dares wins";
 
-"Purifier par le feu"       = "Purified by fire";
-"Egarés"                    = "Lost!";
-"Ouverture de la chasse"    = "Open season";
-"L'ame du démon"            = "Soul of the devil";
+"Purifier par le feu"       = "cleansing by fire";
+"Egarés"                    = "Misled";
+"Ouverture de la chasse"    = "The hunt begins";
+"L'ame du démon"            = "The demon's soul";
 "Expérimentation animale"   = "Animal experimentation";
-"Chasse et cours"           = "Hunt and run";
-"La forge"                  = "The Forge";
-"Les reliques"              = "Relics";
+"Chasse et cours"           = "The hunt's Afoot";
+"La forge"                  = "The forge";
+"Les reliques"              = "The relics";
+"Soeur d'ames"              = "Sisters in arms";
+"Dedale"                    = "Dédale";
+"Revendication"             = "Demands"
 
 "Air putride"       = "Putrid air";
 "Il est a nous"     = "It's our";
